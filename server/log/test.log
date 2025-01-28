@@ -1,0 +1,354 @@
+2025-01-23 19:04:45,984 - DEBUG - Processing product: S�tor, Category: S�tor, Group: 6x3, Color: Fekete, Quantity: 10
+2025-01-23 19:04:45,987 - DEBUG - Accessories found for product: S�tor, 1 db
+2025-01-23 19:04:45,987 - DEBUG - Processing product: B�rsz�k, Category: B�tor, Group: Sz�k, Color: Fekete, Quantity: 10
+2025-01-23 19:04:45,989 - DEBUG - Accessories found for product: B�rsz�k, 0 db
+2025-01-23 19:04:45,990 - DEBUG - Processing product: S�tor, Category: S�tor, Group: 6x3, Color: Fekete, Quantity: 10
+2025-01-23 19:04:45,991 - DEBUG - Processing product: B�rsz�k, Category: B�tor, Group: Sz�k, Color: Fekete, Quantity: 10
+2025-01-23 19:04:45,992 - INFO - Total logistic cost calculated: 6000.0
+2025-01-23 19:04:45,993 - INFO - Total human cost calculated: 75000.0
+2025-01-23 19:04:46,007 - INFO - PDF successfully generated and saved at: D:\Work\ColorRent\ColorRent-Inventory\server\routes\..\generated_pdf\price_offer\M�sodik_teszt_20250123_190445_arajanlat.pdf
+2025-01-23 19:04:46,021 - INFO - 127.0.0.1 - - [23/Jan/2025 19:04:46] "POST /api/generate_price_offer_pdf HTTP/1.1" 200 -
+2025-01-23 19:04:52,287 - DEBUG - Running authenticate_request for projects.edit_project
+2025-01-23 19:04:52,288 - INFO - Authorized access to projects.edit_project by 127.0.0.1
+2025-01-23 19:04:52,289 - INFO - 127.0.0.1 - - [23/Jan/2025 19:04:52] "OPTIONS /api/edit_project HTTP/1.1" 200 -
+2025-01-23 19:04:52,600 - DEBUG - Running authenticate_request for projects.edit_project
+2025-01-23 19:04:52,601 - INFO - Authorized access to projects.edit_project by 127.0.0.1
+2025-01-23 19:04:52,601 - INFO - PUT /api/edit_project endpoint hit
+2025-01-23 19:04:52,602 - INFO - Updating project with ID: 3
+2025-01-23 19:04:52,605 - INFO - Project base data updated successfully
+2025-01-23 19:04:52,605 - INFO - Updating assets data
+2025-01-23 19:04:52,608 - INFO - Updating human resources data
+2025-01-23 19:04:52,612 - INFO - Updating logistics data
+2025-01-23 19:04:52,618 - INFO - Project and related data updated successfully
+2025-01-23 19:04:52,619 - INFO - 127.0.0.1 - - [23/Jan/2025 19:04:52] "PUT /api/edit_project HTTP/1.1" 200 -
+2025-01-23 19:04:52,864 - DEBUG - Running authenticate_request for projects.get_projects
+2025-01-23 19:04:52,864 - INFO - Authorized access to projects.get_projects by 127.0.0.1
+2025-01-23 19:04:52,866 - INFO - 127.0.0.1 - - [23/Jan/2025 19:04:52] "OPTIONS /api/get_projects HTTP/1.1" 200 -
+2025-01-23 19:04:52,943 - DEBUG - Running authenticate_request for projects.get_projects
+2025-01-23 19:04:52,944 - INFO - Authorized access to projects.get_projects by 127.0.0.1
+2025-01-23 19:04:52,945 - INFO - GET /api/get_projects endpoint hit
+2025-01-23 19:04:52,946 - DEBUG - Current date for comparison (formatted): 2025-01-23
+2025-01-23 19:04:52,948 - INFO - Updated 0 projects to 'Lej�rt' status where expiration_date < 2025-01-23
+2025-01-23 19:04:52,965 - INFO - Projects fetched successfully
+2025-01-23 19:04:52,967 - INFO - 127.0.0.1 - - [23/Jan/2025 19:04:52] "GET /api/get_projects HTTP/1.1" 200 -
+2025-01-24 12:52:01,732 - DEBUG - Running authenticate_request for auth.protected
+2025-01-24 12:52:01,733 - INFO - Authorized access to auth.protected by 127.0.0.1
+2025-01-24 12:52:01,734 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:01] "OPTIONS /api/protected HTTP/1.1" 200 -
+2025-01-24 12:52:01,995 - DEBUG - Running authenticate_request for auth.protected
+2025-01-24 12:52:01,996 - WARNING - Unauthorized access attempt to auth.protected from 127.0.0.1
+2025-01-24 12:52:01,997 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:01] "[31m[1mGET /api/protected HTTP/1.1[0m" 401 -
+2025-01-24 12:52:06,104 - DEBUG - Running authenticate_request for auth.login
+2025-01-24 12:52:06,105 - DEBUG - Public endpoint accessed: auth.login
+2025-01-24 12:52:06,105 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:06] "OPTIONS /api/login HTTP/1.1" 200 -
+2025-01-24 12:52:06,421 - DEBUG - Running authenticate_request for auth.login
+2025-01-24 12:52:06,422 - DEBUG - Public endpoint accessed: auth.login
+2025-01-24 12:52:06,422 - INFO - Login attempt from IP: 127.0.0.1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-24 12:52:06,657 - DEBUG - Password check for user testuser: Success
+2025-01-24 12:52:06,658 - INFO - Successful login for user 'testuser' from IP: 127.0.0.1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36
+2025-01-24 12:52:06,659 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:06] "POST /api/login HTTP/1.1" 200 -
+2025-01-24 12:52:06,765 - DEBUG - Running authenticate_request for auth.protected
+2025-01-24 12:52:06,766 - INFO - Authorized access to auth.protected by 127.0.0.1
+2025-01-24 12:52:06,767 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:06] "OPTIONS /api/protected HTTP/1.1" 200 -
+2025-01-24 12:52:07,084 - DEBUG - Running authenticate_request for auth.protected
+2025-01-24 12:52:07,085 - INFO - Authorized access to auth.protected by 127.0.0.1
+2025-01-24 12:52:07,085 - INFO - Protected endpoint accessed by user: {'username': 'testuser', 'role': 'Owner'}
+2025-01-24 12:52:07,086 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:07] "GET /api/protected HTTP/1.1" 200 -
+2025-01-24 12:52:07,331 - DEBUG - Running authenticate_request for auth.protected
+2025-01-24 12:52:07,332 - INFO - Authorized access to auth.protected by 127.0.0.1
+2025-01-24 12:52:07,333 - INFO - Protected endpoint accessed by user: {'username': 'testuser', 'role': 'Owner'}
+2025-01-24 12:52:07,334 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:07] "GET /api/protected HTTP/1.1" 200 -
+2025-01-24 12:52:07,407 - DEBUG - Running authenticate_request for events.get_events
+2025-01-24 12:52:07,407 - INFO - Authorized access to events.get_events by 127.0.0.1
+2025-01-24 12:52:07,409 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:07] "OPTIONS /api/events HTTP/1.1" 200 -
+2025-01-24 12:52:07,666 - DEBUG - Running authenticate_request for events.get_events
+2025-01-24 12:52:07,667 - INFO - Authorized access to events.get_events by 127.0.0.1
+2025-01-24 12:52:07,668 - INFO - GET /api/events endpoint hit
+2025-01-24 12:52:07,669 - INFO - Processing project ID: 4, Name: Valami
+2025-01-24 12:52:07,670 - INFO - Processing project ID: 5, Name: Nem tudom
+2025-01-24 12:52:07,670 - INFO - 2 events fetched successfully.
+2025-01-24 12:52:07,671 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:07] "GET /api/events HTTP/1.1" 200 -
+2025-01-24 12:52:09,685 - DEBUG - Running authenticate_request for inventory.get_categories
+2025-01-24 12:52:09,686 - INFO - Authorized access to inventory.get_categories by 127.0.0.1
+2025-01-24 12:52:09,687 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:09] "OPTIONS /api/inventory/categories HTTP/1.1" 200 -
+2025-01-24 12:52:09,995 - DEBUG - Running authenticate_request for inventory.get_inventory
+2025-01-24 12:52:09,995 - DEBUG - Running authenticate_request for inventory.get_categories
+2025-01-24 12:52:09,995 - DEBUG - Running authenticate_request for inventory.get_all_product_details
+2025-01-24 12:52:09,996 - INFO - Authorized access to inventory.get_inventory by 127.0.0.1
+2025-01-24 12:52:09,996 - INFO - Authorized access to inventory.get_categories by 127.0.0.1
+2025-01-24 12:52:09,997 - INFO - Authorized access to inventory.get_all_product_details by 127.0.0.1
+2025-01-24 12:52:09,997 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:09] "OPTIONS /api/inventory?category=Term�kek HTTP/1.1" 200 -
+2025-01-24 12:52:09,998 - INFO - Request received to fetch all categories with their subcategories
+2025-01-24 12:52:09,998 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:09] "OPTIONS /api/inventory/getProductDetails HTTP/1.1" 200 -
+2025-01-24 12:52:10,001 - INFO - Fetched 6 product category-group pairs
+2025-01-24 12:52:10,005 - INFO - Fetched 6 accessory category-group pairs
+2025-01-24 12:52:10,008 - INFO - Fetched 6 part category-group pairs
+2025-01-24 12:52:10,009 - INFO - Categories successfully fetched and structured
+2025-01-24 12:52:10,011 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:10] "GET /api/inventory/categories HTTP/1.1" 200 -
+2025-01-24 12:52:10,305 - DEBUG - Running authenticate_request for inventory.get_inventory
+2025-01-24 12:52:10,305 - DEBUG - Running authenticate_request for inventory.get_all_product_details
+2025-01-24 12:52:10,306 - INFO - Authorized access to inventory.get_inventory by 127.0.0.1
+2025-01-24 12:52:10,307 - INFO - Authorized access to inventory.get_all_product_details by 127.0.0.1
+2025-01-24 12:52:10,307 - INFO - get_inventory endpoint hit with category: Term�kek
+2025-01-24 12:52:10,308 - INFO - Request received to fetch product details with associated parts and accessories
+2025-01-24 12:52:10,308 - INFO - Executing database query for category: Term�kek
+2025-01-24 12:52:10,310 - INFO - Fetched 4 products
+2025-01-24 12:52:10,310 - INFO - Processing product ID: 2, Name: B�rsz�k
+2025-01-24 12:52:10,312 - INFO - Fetched 1 associated parts for product ID: 2
+2025-01-24 12:52:10,313 - INFO - Fetched 0 associated accessories for product ID: 2
+2025-01-24 12:52:10,314 - INFO - Calculated max producible quantity for product ID 2: 15
+2025-01-24 12:52:10,314 - INFO - Processing product ID: 4, Name: B�tor jwt
+2025-01-24 12:52:10,316 - INFO - Fetched 1 associated parts for product ID: 4
+2025-01-24 12:52:10,317 - INFO - Fetched 0 associated accessories for product ID: 4
+2025-01-24 12:52:10,318 - INFO - Calculated max producible quantity for product ID 4: 10
+2025-01-24 12:52:10,318 - INFO - Processing product ID: 3, Name: �j s�tor
+2025-01-24 12:52:10,320 - INFO - Fetched 1 associated parts for product ID: 3
+2025-01-24 12:52:10,321 - INFO - Fetched 0 associated accessories for product ID: 3
+2025-01-24 12:52:10,322 - INFO - Calculated max producible quantity for product ID 3: 20
+2025-01-24 12:52:10,322 - INFO - Processing product ID: 1, Name: S�tor
+2025-01-24 12:52:10,323 - INFO - Fetched 3 associated parts for product ID: 1
+2025-01-24 12:52:10,325 - INFO - Fetched 1 associated accessories for product ID: 1
+2025-01-24 12:52:10,325 - INFO - Calculated max producible quantity for product ID 1: 3
+2025-01-24 12:52:10,326 - INFO - Product details successfully fetched and processed
+2025-01-24 12:52:10,327 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:10] "GET /api/inventory/getProductDetails HTTP/1.1" 200 -
+2025-01-24 12:52:10,358 - INFO - Data successfully transformed for category: Term�kek
+2025-01-24 12:52:10,359 - INFO - Data returned successfully for category Term�kek
+2025-01-24 12:52:10,360 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:10] "GET /api/inventory?category=Term�kek HTTP/1.1" 200 -
+2025-01-24 12:52:10,647 - DEBUG - Running authenticate_request for inventory.update_product_quantities
+2025-01-24 12:52:10,648 - INFO - Authorized access to inventory.update_product_quantities by 127.0.0.1
+2025-01-24 12:52:10,649 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:10] "OPTIONS /api/inventory/updateProductQuantities HTTP/1.1" 200 -
+2025-01-24 12:52:10,693 - DEBUG - Running authenticate_request for inventory.get_categories
+2025-01-24 12:52:10,694 - INFO - Authorized access to inventory.get_categories by 127.0.0.1
+2025-01-24 12:52:10,694 - INFO - Request received to fetch all categories with their subcategories
+2025-01-24 12:52:10,695 - INFO - Fetched 6 product category-group pairs
+2025-01-24 12:52:10,696 - INFO - Fetched 6 accessory category-group pairs
+2025-01-24 12:52:10,697 - INFO - Fetched 6 part category-group pairs
+2025-01-24 12:52:10,698 - INFO - Categories successfully fetched and structured
+2025-01-24 12:52:10,699 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:10] "GET /api/inventory/categories HTTP/1.1" 200 -
+2025-01-24 12:52:10,955 - DEBUG - Running authenticate_request for inventory.update_product_quantities
+2025-01-24 12:52:10,956 - INFO - Authorized access to inventory.update_product_quantities by 127.0.0.1
+2025-01-24 12:52:10,957 - INFO - Request received to update product quantities
+2025-01-24 12:52:10,958 - INFO - Updated product_id=2 with quantity=15
+2025-01-24 12:52:10,959 - INFO - Updated product_id=4 with quantity=10
+2025-01-24 12:52:10,960 - INFO - Updated product_id=3 with quantity=20
+2025-01-24 12:52:10,961 - INFO - Updated product_id=1 with quantity=3
+2025-01-24 12:52:10,964 - INFO - Product quantities updated successfully
+2025-01-24 12:52:10,965 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:10] "POST /api/inventory/updateProductQuantities HTTP/1.1" 200 -
+2025-01-24 12:52:11,188 - DEBUG - Running authenticate_request for projects.get_projects
+2025-01-24 12:52:11,189 - INFO - Authorized access to projects.get_projects by 127.0.0.1
+2025-01-24 12:52:11,190 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:11] "OPTIONS /api/get_projects HTTP/1.1" 200 -
+2025-01-24 12:52:11,280 - DEBUG - Running authenticate_request for inventory.get_inventory
+2025-01-24 12:52:11,281 - INFO - Authorized access to inventory.get_inventory by 127.0.0.1
+2025-01-24 12:52:11,281 - INFO - get_inventory endpoint hit with category: Term�kek
+2025-01-24 12:52:11,282 - INFO - Executing database query for category: Term�kek
+2025-01-24 12:52:11,286 - INFO - Data successfully transformed for category: Term�kek
+2025-01-24 12:52:11,286 - INFO - Data returned successfully for category Term�kek
+2025-01-24 12:52:11,288 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:11] "GET /api/inventory?category=Term�kek HTTP/1.1" 200 -
+2025-01-24 12:52:11,497 - DEBUG - Running authenticate_request for projects.get_projects
+2025-01-24 12:52:11,498 - INFO - Authorized access to projects.get_projects by 127.0.0.1
+2025-01-24 12:52:11,499 - INFO - GET /api/get_projects endpoint hit
+2025-01-24 12:52:11,499 - DEBUG - Current date for comparison (formatted): 2025-01-24
+2025-01-24 12:52:11,504 - INFO - Updated 1 projects to 'Lej�rt' status where expiration_date < 2025-01-24
+2025-01-24 12:52:11,516 - INFO - Projects fetched successfully
+2025-01-24 12:52:11,518 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:11] "GET /api/get_projects HTTP/1.1" 200 -
+2025-01-24 12:52:13,279 - DEBUG - Running authenticate_request for users.get_project_participants
+2025-01-24 12:52:13,280 - DEBUG - Running authenticate_request for locations_bp.add_location
+2025-01-24 12:52:13,280 - DEBUG - Running authenticate_request for partners_bp.add_contact
+2025-01-24 12:52:13,280 - DEBUG - Running authenticate_request for inventory.get_product_categories
+2025-01-24 12:52:13,281 - DEBUG - Running authenticate_request for partners_bp.get_partners
+2025-01-24 12:52:13,281 - DEBUG - Running authenticate_request for inventory.get_product_colors
+2025-01-24 12:52:13,282 - INFO - Authorized access to users.get_project_participants by 127.0.0.1
+2025-01-24 12:52:13,282 - INFO - Authorized access to locations_bp.add_location by 127.0.0.1
+2025-01-24 12:52:13,282 - INFO - Authorized access to partners_bp.add_contact by 127.0.0.1
+2025-01-24 12:52:13,283 - INFO - Authorized access to inventory.get_product_categories by 127.0.0.1
+2025-01-24 12:52:13,283 - INFO - Authorized access to partners_bp.get_partners by 127.0.0.1
+2025-01-24 12:52:13,283 - INFO - Authorized access to inventory.get_product_colors by 127.0.0.1
+2025-01-24 12:52:13,284 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/get_users HTTP/1.1" 200 -
+2025-01-24 12:52:13,285 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/locations HTTP/1.1" 200 -
+2025-01-24 12:52:13,286 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/contacts HTTP/1.1" 200 -
+2025-01-24 12:52:13,287 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/product-category/list HTTP/1.1" 200 -
+2025-01-24 12:52:13,287 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/partners HTTP/1.1" 200 -
+2025-01-24 12:52:13,288 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/product-color/list HTTP/1.1" 200 -
+2025-01-24 12:52:13,594 - DEBUG - Running authenticate_request for logistics.get_items
+2025-01-24 12:52:13,594 - DEBUG - Running authenticate_request for products_to_project.get_filtered_products
+2025-01-24 12:52:13,595 - DEBUG - Running authenticate_request for products_to_project.get_product_parts
+2025-01-24 12:52:13,595 - DEBUG - Running authenticate_request for products_to_project.get_filtered_products
+2025-01-24 12:52:13,596 - INFO - Authorized access to logistics.get_items by 127.0.0.1
+2025-01-24 12:52:13,596 - INFO - Authorized access to products_to_project.get_filtered_products by 127.0.0.1
+2025-01-24 12:52:13,597 - INFO - Authorized access to products_to_project.get_product_parts by 127.0.0.1
+2025-01-24 12:52:13,597 - INFO - Authorized access to products_to_project.get_filtered_products by 127.0.0.1
+2025-01-24 12:52:13,598 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/get_items HTTP/1.1" 200 -
+2025-01-24 12:52:13,598 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/products/filtered-products/list HTTP/1.1" 200 -
+2025-01-24 12:52:13,599 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/get_product_parts HTTP/1.1" 200 -
+2025-01-24 12:52:13,600 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/products/filtered-products/list HTTP/1.1" 200 -
+2025-01-24 12:52:13,607 - DEBUG - Running authenticate_request for products_to_project.get_product_parts
+2025-01-24 12:52:13,608 - DEBUG - Running authenticate_request for users.get_project_participants
+2025-01-24 12:52:13,608 - INFO - Authorized access to products_to_project.get_product_parts by 127.0.0.1
+2025-01-24 12:52:13,609 - INFO - Authorized access to users.get_project_participants by 127.0.0.1
+2025-01-24 12:52:13,610 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "OPTIONS /api/get_product_parts HTTP/1.1" 200 -
+2025-01-24 12:52:13,611 - INFO - GET /api/participants endpoint hit
+2025-01-24 12:52:13,614 - INFO - Fetched 8 participants successfully
+2025-01-24 12:52:13,615 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "GET /api/get_users HTTP/1.1" 200 -
+2025-01-24 12:52:13,909 - DEBUG - Running authenticate_request for locations_bp.get_locations
+2025-01-24 12:52:13,910 - DEBUG - Running authenticate_request for partners_bp.get_contacts
+2025-01-24 12:52:13,910 - DEBUG - Running authenticate_request for inventory.get_product_categories
+2025-01-24 12:52:13,910 - DEBUG - Running authenticate_request for partners_bp.get_partners
+2025-01-24 12:52:13,911 - INFO - Authorized access to locations_bp.get_locations by 127.0.0.1
+2025-01-24 12:52:13,912 - INFO - Authorized access to partners_bp.get_contacts by 127.0.0.1
+2025-01-24 12:52:13,912 - INFO - Authorized access to inventory.get_product_categories by 127.0.0.1
+2025-01-24 12:52:13,913 - INFO - Authorized access to partners_bp.get_partners by 127.0.0.1
+2025-01-24 12:52:13,913 - INFO - GET /api/locations endpoint hit
+2025-01-24 12:52:13,913 - INFO - GET /api/contacts endpoint hit
+2025-01-24 12:52:13,914 - INFO - Request received to list all product categories
+2025-01-24 12:52:13,914 - INFO - GET /api/partners endpoint hit
+2025-01-24 12:52:13,915 - INFO - Fetched 11 locations successfully
+2025-01-24 12:52:13,918 - INFO - Fetched 9 contacts successfully
+2025-01-24 12:52:13,918 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "GET /api/locations HTTP/1.1" 200 -
+2025-01-24 12:52:13,920 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "GET /api/contacts HTTP/1.1" 200 -
+2025-01-24 12:52:13,922 - DEBUG - Running authenticate_request for inventory.get_product_colors
+2025-01-24 12:52:13,923 - DEBUG - Running authenticate_request for products_to_project.get_filtered_products
+2025-01-24 12:52:13,924 - INFO - Authorized access to inventory.get_product_colors by 127.0.0.1
+2025-01-24 12:52:13,926 - INFO - Authorized access to products_to_project.get_filtered_products by 127.0.0.1
+2025-01-24 12:52:13,926 - INFO - Request received to list all product colors
+2025-01-24 12:52:13,928 - INFO - POST /api/products/filtered-products/list endpoint hit
+2025-01-24 12:52:13,929 - INFO - Filter parameters received: category_name=Term�k jwt, group_name=Term�k jwt ez is, color_name=Jwt alu, assembly_start_date=2025-02-06 00:00:00, disassembly_end_date=2025-02-09 00:00:00
+2025-01-24 12:52:13,929 - INFO - Fetched 3 product colors from the database
+2025-01-24 12:52:13,931 - INFO - Product colors successfully transformed into list format
+2025-01-24 12:52:13,933 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "GET /api/product-color/list HTTP/1.1" 200 -
+2025-01-24 12:52:13,937 - INFO - Fetched 1 products successfully with reserved quantities considered
+2025-01-24 12:52:13,939 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "POST /api/products/filtered-products/list HTTP/1.1" 200 -
+2025-01-24 12:52:13,971 - INFO - Fetched 6 product categories from the database
+2025-01-24 12:52:13,971 - INFO - Product categories successfully transformed into list format
+2025-01-24 12:52:13,973 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "GET /api/product-category/list HTTP/1.1" 200 -
+2025-01-24 12:52:13,981 - INFO - Fetched 254 partners successfully
+2025-01-24 12:52:13,985 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:13] "GET /api/partners HTTP/1.1" 200 -
+2025-01-24 12:52:14,232 - DEBUG - Running authenticate_request for products_to_project.get_product_parts
+2025-01-24 12:52:14,233 - DEBUG - Running authenticate_request for products_to_project.get_filtered_products
+2025-01-24 12:52:14,234 - INFO - Authorized access to products_to_project.get_product_parts by 127.0.0.1
+2025-01-24 12:52:14,234 - INFO - Authorized access to products_to_project.get_filtered_products by 127.0.0.1
+2025-01-24 12:52:14,235 - INFO - POST /api/get_product_parts endpoint hit
+2025-01-24 12:52:14,235 - INFO - POST /api/products/filtered-products/list endpoint hit
+2025-01-24 12:52:14,235 - INFO - Received assets: [{'category': 'Term�k jwt', 'color': 'Jwt alu', 'extraProductCostValue': '0.00', 'group': 'Term�k jwt ez is', 'name': 'B�tor jwt', 'productQuantityExternal': 0, 'requestedQuantity': 5}, {'category': 'S�tor', 'color': 'Fekete', 'extraProductCostValue': '0.00', 'group': '6x3', 'name': 'S�tor', 'productQuantityExternal': 0, 'requestedQuantity': 3}]
+2025-01-24 12:52:14,236 - INFO - Filter parameters received: category_name=Term�k jwt, group_name=Term�k jwt ez is, color_name=Jwt alu, assembly_start_date=2025-02-06 00:00:00, disassembly_end_date=2025-02-09 00:00:00
+2025-01-24 12:52:14,237 - INFO - Processing asset: category=Term�k jwt, group=Term�k jwt ez is, color=Jwt alu
+2025-01-24 12:52:14,238 - INFO - Found product: (4, 'B�tor jwt', 10)
+2025-01-24 12:52:14,240 - INFO - Fetched 1 products successfully with reserved quantities considered
+2025-01-24 12:52:14,241 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:14] "POST /api/products/filtered-products/list HTTP/1.1" 200 -
+2025-01-24 12:52:14,245 - DEBUG - Running authenticate_request for logistics.get_items
+2025-01-24 12:52:14,245 - DEBUG - Running authenticate_request for products_to_project.get_product_parts
+2025-01-24 12:52:14,247 - INFO - Authorized access to logistics.get_items by 127.0.0.1
+2025-01-24 12:52:14,247 - INFO - Authorized access to products_to_project.get_product_parts by 127.0.0.1
+2025-01-24 12:52:14,248 - INFO - GET /api/get_items endpoint hit
+2025-01-24 12:52:14,248 - INFO - POST /api/get_product_parts endpoint hit
+2025-01-24 12:52:14,249 - INFO - Received assets: [{'category': 'Term�k jwt', 'color': 'Jwt alu', 'extraProductCostValue': '0.00', 'group': 'Term�k jwt ez is', 'name': 'B�tor jwt', 'productQuantityExternal': 0, 'requestedQuantity': 5, 'id': 'asset-0-1737719533044'}, {'category': 'S�tor', 'color': 'Fekete', 'extraProductCostValue': '0.00', 'group': '6x3', 'name': 'S�tor', 'productQuantityExternal': 0, 'requestedQuantity': 3, 'id': 'asset-1-1737719533044'}]
+2025-01-24 12:52:14,250 - INFO - Processing item ID: 2, Name: 3T teheraut� vid�k
+2025-01-24 12:52:14,250 - INFO - Processing asset: category=S�tor, group=6x3, color=Fekete
+2025-01-24 12:52:14,250 - INFO - Processing asset: category=Term�k jwt, group=Term�k jwt ez is, color=Jwt alu
+2025-01-24 12:52:14,251 - INFO - Processing item ID: 3, Name: 2T teheraut� pest 
+2025-01-24 12:52:14,252 - INFO - Found product: (1, 'S�tor', 3)
+2025-01-24 12:52:14,253 - INFO - Processing item ID: 4, Name: 2T teheraut� vid�k
+2025-01-24 12:52:14,254 - INFO - Processing item ID: 1, Name: 3T teheraut� pest
+2025-01-24 12:52:14,255 - INFO - Processing item ID: 12, Name: 4T teheraut� vid�k
+2025-01-24 12:52:14,255 - INFO - Processed 5 items successfully
+2025-01-24 12:52:14,256 - INFO - 5 items fetched successfully.
+2025-01-24 12:52:14,257 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:14] "POST /api/get_product_parts HTTP/1.1" 200 -
+2025-01-24 12:52:14,258 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:14] "GET /api/get_items HTTP/1.1" 200 -
+2025-01-24 12:52:14,259 - INFO - Found product: (4, 'B�tor jwt', 10)
+2025-01-24 12:52:14,273 - INFO - Processing asset: category=S�tor, group=6x3, color=Fekete
+2025-01-24 12:52:14,275 - INFO - Found product: (1, 'S�tor', 3)
+2025-01-24 12:52:14,279 - DEBUG - Running authenticate_request for products_to_project.get_filtered_products
+2025-01-24 12:52:14,279 - INFO - Processed 5 items successfully
+2025-01-24 12:52:14,281 - INFO - Authorized access to products_to_project.get_filtered_products by 127.0.0.1
+2025-01-24 12:52:14,283 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:14] "POST /api/get_product_parts HTTP/1.1" 200 -
+2025-01-24 12:52:14,283 - INFO - POST /api/products/filtered-products/list endpoint hit
+2025-01-24 12:52:14,286 - INFO - Filter parameters received: category_name=S�tor, group_name=6x3, color_name=Fekete, assembly_start_date=2025-02-06 00:00:00, disassembly_end_date=2025-02-09 00:00:00
+2025-01-24 12:52:14,292 - INFO - Fetched 1 products successfully with reserved quantities considered
+2025-01-24 12:52:14,294 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:14] "POST /api/products/filtered-products/list HTTP/1.1" 200 -
+2025-01-24 12:52:14,554 - DEBUG - Running authenticate_request for products_to_project.get_filtered_products
+2025-01-24 12:52:14,555 - INFO - Authorized access to products_to_project.get_filtered_products by 127.0.0.1
+2025-01-24 12:52:14,556 - INFO - POST /api/products/filtered-products/list endpoint hit
+2025-01-24 12:52:14,556 - INFO - Filter parameters received: category_name=S�tor, group_name=6x3, color_name=Fekete, assembly_start_date=2025-02-06 00:00:00, disassembly_end_date=2025-02-09 00:00:00
+2025-01-24 12:52:14,560 - INFO - Fetched 1 products successfully with reserved quantities considered
+2025-01-24 12:52:14,561 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:14] "POST /api/products/filtered-products/list HTTP/1.1" 200 -
+2025-01-24 12:52:21,482 - DEBUG - Running authenticate_request for users.get_project_participants
+2025-01-24 12:52:21,482 - DEBUG - Running authenticate_request for partners_bp.get_partners
+2025-01-24 12:52:21,482 - DEBUG - Running authenticate_request for locations_bp.add_location
+2025-01-24 12:52:21,483 - DEBUG - Running authenticate_request for partners_bp.add_contact
+2025-01-24 12:52:21,483 - DEBUG - Running authenticate_request for inventory.get_product_categories
+2025-01-24 12:52:21,484 - DEBUG - Running authenticate_request for inventory.get_product_colors
+2025-01-24 12:52:21,484 - INFO - Authorized access to users.get_project_participants by 127.0.0.1
+2025-01-24 12:52:21,484 - INFO - Authorized access to partners_bp.get_partners by 127.0.0.1
+2025-01-24 12:52:21,485 - INFO - Authorized access to locations_bp.add_location by 127.0.0.1
+2025-01-24 12:52:21,485 - INFO - Authorized access to partners_bp.add_contact by 127.0.0.1
+2025-01-24 12:52:21,485 - INFO - Authorized access to inventory.get_product_categories by 127.0.0.1
+2025-01-24 12:52:21,486 - INFO - Authorized access to inventory.get_product_colors by 127.0.0.1
+2025-01-24 12:52:21,487 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "OPTIONS /api/get_users HTTP/1.1" 200 -
+2025-01-24 12:52:21,488 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "OPTIONS /api/partners HTTP/1.1" 200 -
+2025-01-24 12:52:21,489 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "OPTIONS /api/locations HTTP/1.1" 200 -
+2025-01-24 12:52:21,489 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "OPTIONS /api/contacts HTTP/1.1" 200 -
+2025-01-24 12:52:21,490 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "OPTIONS /api/product-category/list HTTP/1.1" 200 -
+2025-01-24 12:52:21,491 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "OPTIONS /api/product-color/list HTTP/1.1" 200 -
+2025-01-24 12:52:21,797 - DEBUG - Running authenticate_request for logistics.get_items
+2025-01-24 12:52:21,798 - INFO - Authorized access to logistics.get_items by 127.0.0.1
+2025-01-24 12:52:21,798 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "OPTIONS /api/get_items HTTP/1.1" 200 -
+2025-01-24 12:52:21,801 - DEBUG - Running authenticate_request for users.get_project_participants
+2025-01-24 12:52:21,802 - DEBUG - Running authenticate_request for partners_bp.get_partners
+2025-01-24 12:52:21,803 - DEBUG - Running authenticate_request for locations_bp.get_locations
+2025-01-24 12:52:21,804 - DEBUG - Running authenticate_request for partners_bp.get_contacts
+2025-01-24 12:52:21,804 - INFO - Authorized access to users.get_project_participants by 127.0.0.1
+2025-01-24 12:52:21,804 - DEBUG - Running authenticate_request for inventory.get_product_categories
+2025-01-24 12:52:21,805 - INFO - Authorized access to partners_bp.get_partners by 127.0.0.1
+2025-01-24 12:52:21,805 - INFO - Authorized access to locations_bp.get_locations by 127.0.0.1
+2025-01-24 12:52:21,806 - INFO - Authorized access to partners_bp.get_contacts by 127.0.0.1
+2025-01-24 12:52:21,806 - INFO - GET /api/participants endpoint hit
+2025-01-24 12:52:21,807 - INFO - Authorized access to inventory.get_product_categories by 127.0.0.1
+2025-01-24 12:52:21,807 - INFO - GET /api/partners endpoint hit
+2025-01-24 12:52:21,807 - INFO - GET /api/locations endpoint hit
+2025-01-24 12:52:21,808 - INFO - GET /api/contacts endpoint hit
+2025-01-24 12:52:21,809 - INFO - Request received to list all product categories
+2025-01-24 12:52:21,810 - INFO - Fetched 8 participants successfully
+2025-01-24 12:52:21,812 - INFO - Fetched 254 partners successfully
+2025-01-24 12:52:21,812 - INFO - Fetched 11 locations successfully
+2025-01-24 12:52:21,813 - INFO - Fetched 9 contacts successfully
+2025-01-24 12:52:21,814 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "GET /api/get_users HTTP/1.1" 200 -
+2025-01-24 12:52:21,817 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "GET /api/partners HTTP/1.1" 200 -
+2025-01-24 12:52:21,817 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "GET /api/locations HTTP/1.1" 200 -
+2025-01-24 12:52:21,818 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "GET /api/contacts HTTP/1.1" 200 -
+2025-01-24 12:52:21,860 - INFO - Fetched 6 product categories from the database
+2025-01-24 12:52:21,861 - INFO - Product categories successfully transformed into list format
+2025-01-24 12:52:21,862 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:21] "GET /api/product-category/list HTTP/1.1" 200 -
+2025-01-24 12:52:22,113 - DEBUG - Running authenticate_request for inventory.get_product_colors
+2025-01-24 12:52:22,113 - INFO - Authorized access to inventory.get_product_colors by 127.0.0.1
+2025-01-24 12:52:22,113 - INFO - Request received to list all product colors
+2025-01-24 12:52:22,117 - INFO - Fetched 3 product colors from the database
+2025-01-24 12:52:22,117 - INFO - Product colors successfully transformed into list format
+2025-01-24 12:52:22,118 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:22] "GET /api/product-color/list HTTP/1.1" 200 -
+2025-01-24 12:52:22,127 - DEBUG - Running authenticate_request for logistics.get_items
+2025-01-24 12:52:22,128 - INFO - Authorized access to logistics.get_items by 127.0.0.1
+2025-01-24 12:52:22,129 - INFO - GET /api/get_items endpoint hit
+2025-01-24 12:52:22,131 - INFO - Processing item ID: 2, Name: 3T teheraut� vid�k
+2025-01-24 12:52:22,131 - INFO - Processing item ID: 3, Name: 2T teheraut� pest 
+2025-01-24 12:52:22,131 - INFO - Processing item ID: 4, Name: 2T teheraut� vid�k
+2025-01-24 12:52:22,132 - INFO - Processing item ID: 1, Name: 3T teheraut� pest
+2025-01-24 12:52:22,132 - INFO - Processing item ID: 12, Name: 4T teheraut� vid�k
+2025-01-24 12:52:22,133 - INFO - 5 items fetched successfully.
+2025-01-24 12:52:22,134 - INFO - 127.0.0.1 - - [24/Jan/2025 12:52:22] "GET /api/get_items HTTP/1.1" 200 -
+2025-01-24 12:55:00,429 - DEBUG - Running authenticate_request for inventory.get_product_groups
+2025-01-24 12:55:00,430 - INFO - Authorized access to inventory.get_product_groups by 127.0.0.1
+2025-01-24 12:55:00,431 - INFO - 127.0.0.1 - - [24/Jan/2025 12:55:00] "OPTIONS /api/product-group/list HTTP/1.1" 200 -
+2025-01-24 12:55:00,670 - DEBUG - Running authenticate_request for inventory.get_product_groups
+2025-01-24 12:55:00,671 - INFO - Authorized access to inventory.get_product_groups by 127.0.0.1
+2025-01-24 12:55:00,672 - INFO - Request received to list product groups for a specific category
+2025-01-24 12:55:00,672 - INFO - Attempting to retrieve product groups for category: S�tor
+2025-01-24 12:55:00,673 - INFO - Category ID for 'S�tor' retrieved: 1
+2025-01-24 12:55:00,674 - INFO - Fetched 2 groups for category 'S�tor'
+2025-01-24 12:55:00,675 - INFO - Product groups successfully transformed into list format
+2025-01-24 12:55:00,676 - INFO - 127.0.0.1 - - [24/Jan/2025 12:55:00] "POST /api/product-group/list HTTP/1.1" 200 -
+2025-01-24 12:55:04,100 - DEBUG - Running authenticate_request for products_to_project.get_filtered_products
+2025-01-24 12:55:04,101 - INFO - Authorized access to products_to_project.get_filtered_products by 127.0.0.1
+2025-01-24 12:55:04,102 - INFO - 127.0.0.1 - - [24/Jan/2025 12:55:04] "OPTIONS /api/products/filtered-products/list HTTP/1.1" 200 -
+2025-01-24 12:55:04,406 - DEBUG - Running authenticate_request for products_to_project.get_filtered_products
+2025-01-24 12:55:04,407 - INFO - Authorized access to products_to_project.get_filtered_products by 127.0.0.1
+2025-01-24 12:55:04,407 - INFO - POST /api/products/filtered-products/list endpoint hit
+2025-01-24 12:55:04,408 - INFO - Filter parameters received: category_name=S�tor, group_name=6x3, color_name=Fekete, assembly_start_date=2025-03-31T22:00:00.000Z, disassembly_end_date=2025-04-04T22:00:00.000Z
+2025-01-24 12:55:04,410 - INFO - No overlapping projects found
+2025-01-24 12:55:04,412 - INFO - 127.0.0.1 - - [24/Jan/2025 12:55:04] "POST /api/products/filtered-products/list HTTP/1.1" 200 -
