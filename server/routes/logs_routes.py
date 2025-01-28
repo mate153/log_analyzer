@@ -25,7 +25,21 @@ def get_logs():
     try:
         connection = get_connection()
         cursor = connection.cursor(cursor_factory=RealDictCursor)
-        cursor.execute("SELECT * FROM logs")
+        
+        cursor.execute("""
+            SELECT 
+                logs.id, 
+                logs.timestamp, 
+                logs.log_level, 
+                logs.message, 
+                logs.details, 
+                log_sources.source_ip, 
+                log_sources.endpoint
+            FROM logs
+            LEFT JOIN log_sources ON logs.source_id = log_sources.id
+            ORDER BY logs.timestamp DESC;
+        """)
+        
         logs = cursor.fetchall()
         cursor.close()
         connection.close()
