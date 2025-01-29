@@ -22,6 +22,7 @@ def get_connection():
 # GET ALL LOGS
 @logs_bp.route('/', methods=['GET'])
 def get_logs():
+    logger.debug("Get all logs endpoint hit.")
     try:
         connection = get_connection()
         cursor = connection.cursor(cursor_factory=RealDictCursor)
