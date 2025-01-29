@@ -3,6 +3,7 @@ import logging
 from urllib.parse import urlparse
 from datetime import datetime
 import json
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -20,6 +21,17 @@ def get_db_config(database_url):
         "host": result.hostname,
         "port": result.port
     }
+
+# GET DATABASE CONNECTION
+def get_connection():
+    try:
+        db_config = get_db_config(os.getenv("DATABASE_URL"))
+        connection = psycopg2.connect(**db_config)
+        logger.debug("Database connection successfully established.")
+        return connection
+    except Exception as e:
+        logger.error(f"Failed to connect to database: {e}")
+        raise
 
 # INITIALIZE DB AND INSERT LOGS IF TABLES DON'T EXIST
 def init_db_with_logs(database_url, log_file_path):
