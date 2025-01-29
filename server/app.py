@@ -5,16 +5,9 @@ from flask_cors import CORS
 from db.database import init_db_with_logs
 from routes.logs_routes import logs_bp
 from routes.ai_routes import ai_bp
-from config import DATABASE_URL
+from config import LOG_DIR, LOG_FILE
 
 app = Flask(__name__)
-
-# LOG FILE LOCATION
-LOG_DIR = "logs"
-LOG_FILE = os.path.join(LOG_DIR, "app.log")
-
-# LOG FILE PATH
-LOG_FILE_PATH = "log/example.log"
 
 # CREATE FOLDER IF NOT EXIST
 if not os.path.exists(LOG_DIR):
@@ -47,7 +40,7 @@ CORS(app)
 
 # INITIALIZE DB
 try:
-    init_db_with_logs(DATABASE_URL, LOG_FILE_PATH)
+    init_db_with_logs()
     logger.info("Database initialized successfully.")
 except Exception as e:
     logger.error(f"Database initialization error: {e}")
