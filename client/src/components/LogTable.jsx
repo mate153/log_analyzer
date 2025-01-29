@@ -61,7 +61,8 @@ const LogTable = () => {
       Swal.fire({
         icon: "info",
         title: "AI Elemzés",
-        text: data.analysis,
+        html: `<p style="text-align:left">${data.analysis.replace(/\n/g, "<br>")}</p>`, 
+        width: 600,
       });
 
     } catch (err) {
@@ -75,6 +76,7 @@ const LogTable = () => {
     }
   };
 
+  // LOADING
   if (loading) {
     Swal.fire({
       title: "Betöltés...",
@@ -88,12 +90,12 @@ const LogTable = () => {
   }
 
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
       <h1>Log Viewer</h1>
-      <button onClick={analyzeLogs} disabled={analyzing}>
+      <button onClick={analyzeLogs} disabled={analyzing} style={{ marginBottom: "30px" }}>
         {analyzing ? "AI Elemzés folyamatban..." : "AI Analyze"}
       </button>
-      <table border="1">
+      <table border="1" style={{ width: "80%", textAlign: "center" }}>
         <thead>
           <tr>
             <th>Timestamp</th>
