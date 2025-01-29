@@ -3,19 +3,19 @@ import logging
 from urllib.parse import urlparse
 from datetime import datetime
 import json
-import os
+from config import DATABASE_URL, LOG_FILE_PATH
 
 logger = logging.getLogger(__name__)
 
 # DB CONFIG
-def get_db_config(database_url):
-    if not database_url:
+def get_db_config():
+    if not DATABASE_URL:
         logger.critical("DATABASE_URL is not set in .env file")
         raise ValueError("DATABASE_URL is missing")
 
-    result = urlparse(database_url)
+    result = urlparse(DATABASE_URL)
     return {
-        "dbname": result.path[1:],  # Path a /inventory_db formátumból "inventory_db"-re konvertálva
+        "dbname": result.path[1:],
         "user": result.username,
         "password": result.password,
         "host": result.hostname,
@@ -25,7 +25,7 @@ def get_db_config(database_url):
 # GET DATABASE CONNECTION
 def get_connection():
     try:
-        db_config = get_db_config(os.getenv("DATABASE_URL"))
+        db_config = get_db_config()
         connection = psycopg2.connect(**db_config)
         logger.debug("Database connection successfully established.")
         return connection
@@ -34,9 +34,9 @@ def get_connection():
         raise
 
 # INITIALIZE DB AND INSERT LOGS IF TABLES DON'T EXIST
-def init_db_with_logs(database_url, log_file_path):
+def init_db_with_logs():
     try:
-        db_config = get_db_config(database_url)
+        db_config = get_db_config()
         with psycopg2.connect(**db_config) as connection:
             with connection.cursor() as cursor:
                 cursor.execute("""
@@ -63,7 +63,7 @@ def init_db_with_logs(database_url, log_file_path):
                 # If there is no data, upload the logs
                 if log_count == 0: 
                     logger.info("No logs found in database. Loading from log file...")
-                    load_logs_from_file(cursor, log_file_path, connection)
+                    load_logs_from_file(cursor)
 
                 connection.commit()
                 logger.info("Database initialization and log import successful.")
@@ -77,10 +77,9 @@ def init_db_with_logs(database_url, log_file_path):
 
 
 # LOAD LOGS FROM FILE INTO DATABASE
-def load_logs_from_file(cursor, log_file_path, connection):
-    """Log fájl feldolgozása és adatok beszúrása az adatbázisba."""
+def load_logs_from_file(cursor):
     try:
-        with open(log_file_path, 'r') as file:
+        with open(LOG_FILE_PATH, 'r') as file:
             for line in file:
                 timestamp, log_level, message, details, source_ip, endpoint = parse_log_line(line.strip())
 
@@ -88,7 +87,6 @@ def load_logs_from_file(cursor, log_file_path, connection):
                     logger.warning(f"Skipped invalid log line: {line.strip()}")
                     continue
 
-                # Log source beszúrása vagy lekérdezése
                 cursor.execute("""
                 INSERT INTO log_sources (source_ip, endpoint)
                 VALUES (%s, %s)
@@ -104,16 +102,15 @@ def load_logs_from_file(cursor, log_file_path, connection):
                     """, (source_ip, endpoint))
                     source_id = cursor.fetchone()[0]
 
-                # Log beszúrása
                 cursor.execute("""
                 INSERT INTO logs (timestamp, log_level, message, details, source_id)
                 VALUES (%s, %s, %s, %s, %s)
                 """, (timestamp, log_level, message, details, source_id))
 
-        logger.info(f"Log file '{log_file_path}' successfully processed.")
+        logger.info(f"Log file '{LOG_FILE_PATH}' successfully processed.")
 
     except FileNotFoundError:
-        logger.error(f"Log file '{log_file_path}' not found.")
+        logger.error(f"Log file '{LOG_FILE_PATH}' not found.")
     except Exception as e:
         logger.error(f"An error occurred while processing log file: {e}")
 
