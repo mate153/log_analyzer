@@ -4,6 +4,7 @@ from flask import Flask
 from flask_cors import CORS
 from db.database import init_db_with_logs
 from routes.logs_routes import logs_bp
+from routes.ai_routes import ai_bp
 from config import DATABASE_URL
 
 app = Flask(__name__)
@@ -53,6 +54,7 @@ except Exception as e:
 
 # REGISTER BLUEPRINT
 app.register_blueprint(logs_bp, url_prefix='/api/logs')
+app.register_blueprint(ai_bp, url_prefix='/api/ai')
 
 if __name__ == '__main__':
     app.run(debug=True)
